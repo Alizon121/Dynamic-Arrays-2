@@ -13,32 +13,14 @@ return this.data[index]
 
   push(val) {
 // Add val to end of array (this.data)
+// increase the capacity! Increase by one from the defaultSize
+//      if length >= current capacity, then resize the capacity
+// Make the storage array with the specified cap
+// set our data = to the copy data 
 
-// Returns 0 at line 57
-// this.data[this.data.length] = val
-// return this.data.length
-
-
-
-for (let i = 0; i < this.data.length; i++) {
-  this.data[i] = this.data[i+1]
-  // console.log(this.data[i])
-}
-// this.length++
-// this.data[this.data.length -1] = val
-
-
-
-
-// Returns 2 at line 62
-// if (this.data.length === 1) {
-// this.length++
-// this.data[0] = val
-// } 
-// else {
-//   this.data[this.data.length - 1] = val
-//   this.length++
-// }
+    this.data[this.length] = val;
+    this.length++;
+    return this.length
   }
 
 
